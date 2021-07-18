@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.float-button {
+  background-color: #00d1b2 !important;
+  color: #fff !important;
+  font-weight: bold;
+  position: fixed !important;
+  right: -77px !important;
+  top: 270px !important;
+  transition: all 0.2s ease-in 0s !important;
+  z-index: 9999 !important;
+  cursor: pointer !important;
+  border-radius: 12% 0% 0% 12% !important;
+}
+
+.float-button:hover {
+  right: -7px !important;
+}
