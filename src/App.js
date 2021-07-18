@@ -3,8 +3,6 @@ import CV from 'react-cv';
 import './index.css';
 import { PictureAsPdf } from '@material-ui/icons';
 import { Button } from '@material-ui/core';
-import { jsPDF } from 'jspdf';
-import html2Canvas from 'html2canvas';
 
 const App = () => {
 
@@ -192,19 +190,13 @@ export default App;
 
 const PrintButton = () => {
   const printPdf = () => {
-    const input = document.getElementById("root");
-    html2Canvas(input).then(canvas => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF('p', 'px', 'a4');
-      var width = pdf.internal.pageSize.getWidth() + 10;
-      var height = pdf.internal.pageSize.getHeight();
-      pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
-      pdf.save('CV Cristóbal Silva Díaz.pdf');
-    });
+    document.getElementById("print-cv-btn").style.visibility = "hidden";
+    window.print();
+    setTimeout(() => document.getElementById("print-cv-btn").style.visibility = "visible", 1000);
   }
 
   return (
-    <Button className="float-button" startIcon={<PictureAsPdf />} onClick={printPdf}>
+    <Button id="print-cv-btn" className="float-button" startIcon={<PictureAsPdf />} onClick={printPdf}>
       Save as PDF
     </Button>
   )
