@@ -5,11 +5,6 @@ import { PictureAsPdf } from '@material-ui/icons';
 import { Button } from '@material-ui/core';
 
 const App = () => {
-
-  React.useEffect(() => {
-    document.title = "Cristobal Silva Diaz"
-  })
-
   return (
     <>
       <PrintButton />
