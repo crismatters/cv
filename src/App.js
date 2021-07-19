@@ -18,7 +18,7 @@ const App = () => {
               { type: 'email', value: 'crismatters@outlook.com' },
               { type: 'email', value: 'crismatters.sls@gmail.com' },
               { type: 'location', value: 'Aguascalientes, Mexico' },
-              { type: 'linkedin', value: 'https://www.linkedin.com/in/crismatters' },
+              { type: 'linkedin', value: 'linkedin.com/in/crismatters' },
               { type: 'github', value: 'github.com/crismatters' }
             ]
           }}
