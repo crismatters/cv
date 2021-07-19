@@ -2,7 +2,7 @@ import React from 'react';
 import CV from 'react-cv';
 import './index.css';
 import { PictureAsPdf } from '@material-ui/icons';
-import { Button } from '@material-ui/core';
+import { Button, Chip, Paper } from '@material-ui/core';
 
 const App = () => {
   return (
@@ -191,8 +191,12 @@ const PrintButton = () => {
   }
 
   return (
-    <Button id="print-cv-btn" className="float-button" startIcon={<PictureAsPdf />} onClick={printPdf}>
-      Save as PDF
-    </Button>
+    <Chip
+      className="float-button"
+      id="print-cv-btn"
+      component={Paper}
+      icon={<PictureAsPdf style={{ color: "#fff" }} />}
+      label={<Button onClick={printPdf} style={{ color: "#fff" }}>Save as PDF</Button>}
+    />
   )
 }

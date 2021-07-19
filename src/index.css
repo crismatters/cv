@@ -17,12 +17,10 @@ code {
   color: #fff !important;
   font-weight: bold;
   position: fixed !important;
-  right: -77px !important;
+  right: -7.5rem !important;
   top: 270px !important;
   transition: all 0.2s ease-in 0s !important;
   z-index: 9999 !important;
-  cursor: pointer !important;
-  border-radius: 12% 0% 0% 12% !important;
 }
 
 .float-button-hidden {
