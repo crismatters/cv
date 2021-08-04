@@ -211,7 +211,7 @@ const PrintButton = () => {
 const UpdatedFooter = () => {
   const [version, setVersion] = React.useState("");
   const getVersion = async () => {
-    const token = process.env.GITHUB_PERSONAL_TOKEN;
+    const token = "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";
     const githubAPI = "https://api.github.com";;
     const octokit = new Octokit({ auth: token });
     const owner = "crismatters";
