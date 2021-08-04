@@ -31,7 +31,7 @@ const App = () => {
                 {
                   title: 'Technical Solutions Engineer',
                   company: 'Google',
-                  description: 'Google Cloud Platform Support Engineer.',
+                  description: 'Google Cloud Platform Solutions Engineer focused on Infrastructure as a Service products.',
                   companyWebSite: 'https://about.google/',
                   datesBetween: '2021.07 - Present',
                   //  descriptionTags: ["Google Cloud"]
