@@ -23,5 +23,3 @@ jobs:
         GITHUB_PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
       with:
         firebase-token: ${{ secrets.FIREBASE_TOKEN }}
-      env:
-        GITHUB_PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
