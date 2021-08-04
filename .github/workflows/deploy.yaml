@@ -11,10 +11,17 @@ jobs:
     - uses: actions/checkout@v2
     - name: Use Node.js
       uses: actions/setup-node@v1
+      env:
+        GITHUB_PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
     - name: Setup the code
       run: npm install
+      env:
+        GITHUB_PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
     - name: Deploy to Firebase
       uses: mohammed-atif/firebase-publish-react@v1.0
+      env:
+        GITHUB_PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
       with:
         firebase-token: ${{ secrets.FIREBASE_TOKEN }}
-      run: "echo token $GITHUB_PERSONAL_TOKEN"
+      env:
+        GITHUB_PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
