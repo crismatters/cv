@@ -4,8 +4,9 @@ on:
     branches: ['master']
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
+    env:
+      GITHUB_PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js
