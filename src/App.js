@@ -84,6 +84,30 @@ const App = () => {
               icon: 'book',
               items: [
                 {
+                  title: 'Architecting with Google Kubernetes Engine: Foundations',
+                  authority: 'Coursera',
+                  authorityWebSite: 'https://www.coursera.org/',
+                  rightSide: '2021.08'
+                },
+                {
+                  title: 'Reliable Google Cloud Infrastructure: Design and Process',
+                  authority: 'Coursera',
+                  authorityWebSite: 'https://www.coursera.org/',
+                  rightSide: '2021.07'
+                },
+                {
+                  title: 'Elastic Google Cloud Infrastructure: Scaling and Automationn',
+                  authority: 'Coursera',
+                  authorityWebSite: 'https://www.coursera.org/',
+                  rightSide: '2021.07'
+                },
+                {
+                  title: 'Essential Google Cloud Infrastructure: Core Services',
+                  authority: 'Coursera',
+                  authorityWebSite: 'https://www.coursera.org/',
+                  rightSide: '2021.07'
+                },
+                {
                   title: 'A Beginner\'s Guide to Linux Kernel Development (LFD103)',
                   authority: 'The Linux Foundation',
                   authorityWebSite: 'https://www.linuxfoundation.org/',
