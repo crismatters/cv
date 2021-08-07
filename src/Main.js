@@ -21,6 +21,9 @@ const Demo = ({ onToggleDark, currentTheme }) => (
                     {...personalData}
                 />
                 <CommonList
+                    {...sections[0]}
+                />
+                <CommonList
                     {...sections[1]}
                 />
                 <CommonList

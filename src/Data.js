@@ -1,4 +1,4 @@
-import { LinkedIn, Mail, GitHub, LocationCity, School, Book, Language, Cloud } from "@material-ui/icons";
+import { LinkedIn, Mail, GitHub, LocationCity, School, Book, Language, Cloud, Archive } from "@material-ui/icons";
 
 export const personalData = {
     image: 'https://drive.google.com/uc?export=view&id=1nN_7WmKM-2JZruZ_FwPkNp17hkxU1FEz',
@@ -16,25 +16,24 @@ export const personalData = {
 const experiencesList = {
     type: 'experiences-list',
     title: 'Experiences',
-    icon: 'archive',
+    icon: <Archive />,
     items: [
         {
             title: 'Technical Solutions Engineer',
-            company: 'Google',
+            authority: 'Google',
             description: 'Google Cloud Platform Solutions Engineer focused on Infrastructure as a Service products.',
-            companyWebSite: 'https://about.google/',
-            datesBetween: '2021.07 - Present',
+            authorityWebSite: 'https://about.google/',
+            meta: '2021.07 - Present',
         },
         {
             title: 'DevOps Engineer',
-            company: 'Softtek',
+            authority: 'Softtek',
             description: `DevOps Engineer focused in configuration management automation
       and containerization of applications. In the area I also gave support to
       web applications development using MongoDB, React JS, Node JS and
       Express JS. Some tools used are RedHat Ansible, SaltStack, Chef Infra, Kubernetes and Gitlab CI.`,
-            companyWebSite: 'https://www.softtek.com/',
-            companyMeta: '',
-            datesBetween: '2019.12 - 2021.07',
+            authorityWebSite: 'https://www.softtek.com/',
+            MediaStreamError: '2019.12 - 2021.07',
         },
     ]
 };
