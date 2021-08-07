@@ -5,12 +5,12 @@ const PersonalInformation = (props) => {
 
     return (
         <>
-            <Grid container component={Paper} style={{ padding: "1rem", marginBottom: "1rem" }}>
+            <Grid container component={Paper} style={{ padding: "1rem", marginBottom: "1rem"}}>
                 <Grid item xs={6} sm={3}>
                     <img src={props.image} alt="Cristobal Diaz" style={{ borderRadius: "50%", maxHeight: "10rem", maxWidth: "10rem" }} />
                 </Grid>
                 <Grid item xs={6} sm={6} style={{ textAlign: "center" }}>
-                    <Typography color="primary" style={{ fontSize: "1.5rem" }}><b>{props.name}</b></Typography>
+                    <Typography color="primary" variant="h5"><b>{props.name}</b></Typography>
                     <Typography>{props.title}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>

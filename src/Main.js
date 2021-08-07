@@ -1,7 +1,7 @@
 import React from "react";
 import CommonList from "./components/CommonList";
 import { PictureAsPdf, Brightness4, Brightness7 } from '@material-ui/icons';
-import { Button, Chip, Paper, Grid, IconButton, Typography } from '@material-ui/core';
+import { Button, Chip, Paper, Grid, IconButton, Typography, Tooltip } from '@material-ui/core';
 import PersonalInformation from "./components/PersonalInformation";
 import { personalData, sections } from "./Data";
 import TagsList from "./components/TagsList";
@@ -12,9 +12,11 @@ const Demo = ({ onToggleDark, currentTheme }) => (
         <PrintButton />
         <Paper>
             <Paper>
-                <IconButton onClick={onToggleDark} id="dark-toggle-btn">
-                    {currentTheme === "dark" ? <Brightness7 /> : <Brightness4 />}
-                </IconButton>
+                <Tooltip title="Toggle Theme" arrow>
+                    <IconButton onClick={onToggleDark} id="dark-toggle-btn">
+                        {currentTheme === "dark" ? <Brightness7 /> : <Brightness4 />}
+                    </IconButton>
+                </Tooltip>
             </Paper>
             <Paper>
                 <PersonalInformation
