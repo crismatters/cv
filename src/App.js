@@ -1,82 +1,51 @@
-import React from 'react';
-import CV from 'react-cv';
-import './index.css';
-import { PictureAsPdf } from '@material-ui/icons';
-import { Button, Chip, Paper } from '@material-ui/core';
-import { personalData, sections } from "./Data";
-const { Octokit } = require("@octokit/core");
-
+import React, { useState } from "react";
+import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
+import Main from "./Main";
 
 const App = () => {
+  // We keep the theme in app state
+  const [theme, setTheme] = useState({
+    palette: {
+      primary: {
+        main: "#1967D2",
+      },
+      secondary: {
+        main: "#C5221F",
+      },
+      type: "light"
+    }
+  });
+
+  // we change the palette type of the theme in state
+  const toggleDarkTheme = () => {
+    let newPaletteType = theme.palette.type === "light" ? "dark" : "light";
+    let primary = "#1967D2", secondary = "#C5221F";
+    if (newPaletteType === "dark") {
+      primary = "#AECBFA";
+      secondary = "#F6AEA9";
+    }
+    setTheme({
+      palette: {
+        primary: {
+          main: primary,
+        },
+        secondary: {
+          main: secondary,
+        },
+        type: newPaletteType
+      }
+    });
+  };
+
+  // we generate a MUI-theme from state's theme object
+  const muiTheme = createTheme(theme);
+
+  // the mui theme is used in the themeProvider.
   return (
-    <>
-      <PrintButton />
-      <div id="cv-csdiaz">
-        <CV
-          personalData={personalData}
-          sections={sections}
-          branding={false} // or false to hide it.
-        />
-      </div>
-      <UpdatedFooter />
-    </>
-  )
-}
+    <MuiThemeProvider theme={muiTheme}>
+      <Main onToggleDark={toggleDarkTheme} currentTheme={theme} />
+    </MuiThemeProvider>
+  );
+};
 
 export default App;
-
-const PrintButton = () => {
-  const printPdf = () => {
-    document.getElementById("print-cv-btn").style.visibility = "hidden";
-    document.getElementById("version-footer").style.visibility = "hidden";
-    window.print();
-    setTimeout(() => {
-      document.getElementById("print-cv-btn").style.visibility = "visible";
-      document.getElementById("version-footer").style.visibility = "visible";
-    }, 1000);
-  }
-
-  return (
-    <Chip
-      className="float-button"
-      id="print-cv-btn"
-      component={Paper}
-      icon={<PictureAsPdf style={{ color: "#fff" }} />}
-      label={<Button onClick={printPdf} style={{ color: "#fff" }}>Save as PDF</Button>}
-    />
-  )
-}
-
-
-const UpdatedFooter = () => {
-  const [version, setVersion] = React.useState("");
-  const getVersion = async () => {
-    const token = process.env.REACT_APP_GITHUB_TOKEN;
-    const githubAPI = "https://api.github.com";;
-    const octokit = new Octokit({ auth: token });
-    const owner = "crismatters";
-    const repo = "cv";
-    try {
-      var tagsURI = `${githubAPI}/repos/${owner}/${repo}/commits`;
-      const response = await octokit.request(`GET ${tagsURI}`);
-      setVersion(response.data[0].commit.committer.date);
-    } catch (e) {
-      console.log(e);
-      setVersion("-")
-    }
-
-  }
-  React.useEffect(() => {
-    getVersion();
-  }, [])
-  return (
-    <footer class="footer" id="version-footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>This is my most recent CV version </strong>
-          and it was updated at {version.split("T")[0]}.
-        </p>
-      </div>
-    </footer>
-  )
-}
