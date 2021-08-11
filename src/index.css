@@ -22,6 +22,16 @@ code {
   z-index: 9999 !important;
 }
 
+.float-button-2 {
+  color: #fff !important;
+  font-weight: bold;
+  position: fixed !important;
+  right: -8.5rem !important;
+  top: 310px !important;
+  transition: all 0.2s ease-in 0s !important;
+  z-index: 9999 !important;
+}
+
 .float-button-hidden {
   background-color: #fff;
   color: #fff;
@@ -36,5 +46,9 @@ code {
 }
 
 .float-button:hover {
+  right: -7px !important;
+}
+
+.float-button-2:hover {
   right: -7px !important;
 }

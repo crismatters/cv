@@ -1,23 +1,18 @@
 import React from "react";
 import CommonList from "./components/CommonList";
 import { PictureAsPdf, Brightness4, Brightness7 } from '@material-ui/icons';
-import { Button, Chip, Paper, Grid, IconButton, Typography, Tooltip } from '@material-ui/core';
+import { Button, Chip, Paper, Grid, Typography } from '@material-ui/core';
 import PersonalInformation from "./components/PersonalInformation";
 import { personalData, sections } from "./Data";
 import TagsList from "./components/TagsList";
+import { gray } from "./assets/colors";
 const { Octokit } = require("@octokit/core");
 
 const Demo = ({ onToggleDark, currentTheme }) => (
     <>
         <PrintButton />
+        <ToggleButton currentTheme={currentTheme} onToggleDark={onToggleDark} />
         <Paper>
-            <Paper>
-                <Tooltip title="Toggle Theme" arrow>
-                    <IconButton onClick={onToggleDark} id="dark-toggle-btn">
-                        {currentTheme === "dark" ? <Brightness7 /> : <Brightness4 />}
-                    </IconButton>
-                </Tooltip>
-            </Paper>
             <Paper>
                 <PersonalInformation
                     {...personalData}
@@ -51,7 +46,30 @@ const Demo = ({ onToggleDark, currentTheme }) => (
 
 export default Demo;
 
-const PrintButton = () => {
+const ToggleButton = ({ currentTheme, onToggleDark }) => {
+    return (
+        <Chip
+            color="primary"
+            className="float-button-2"
+            id="dark-toggle-btn"
+            component={Paper}
+            icon={currentTheme === "dark" ?
+                <Brightness7 style={{ color: gray[800] }}/> : 
+                <Brightness4 />
+            }
+            label={
+                <Button 
+                    onClick={onToggleDark} 
+                    style={{ color: currentTheme === "dark" ? gray[800] : "#fff" }}
+                >
+                    Toggle Theme
+                </Button>
+            }
+        />
+    )
+}
+
+const PrintButton = ({ currentTheme }) => {
     const printPdf = () => {
         document.getElementById("print-cv-btn").style.visibility = "hidden";
         document.getElementById("version-footer").style.visibility = "hidden";
@@ -70,8 +88,8 @@ const PrintButton = () => {
             className="float-button"
             id="print-cv-btn"
             component={Paper}
-            icon={<PictureAsPdf style={{ color: "#fff" }} />}
-            label={<Button onClick={printPdf} style={{ color: "#fff" }}>Save as PDF</Button>}
+            icon={<PictureAsPdf style={{ color: currentTheme === "dark" ? gray[800] : "#fff" }} />}
+            label={<Button onClick={printPdf} style={{ color: currentTheme === "dark" ? gray[800] : "#fff" }}>Save as PDF</Button>}
         />
     )
 }
