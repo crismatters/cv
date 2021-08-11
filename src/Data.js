@@ -181,7 +181,7 @@ const skillsList = {
     icon: <Cloud />,
     items: [
         "Linux", "Windows", "Wireshark", "NMap", "MySQL", "PostgreSQL", "MongoDB", "JavaScript",
-        "RedHat Ansible", "SaltStack", "Kubernetes", "GitlabCI", "Docker", "Scrum", "Google Cloud", "Azure",
+        "RedHat Ansible", "SaltStack", "Kubernetes", "GitlabCI", "Docker", "Google Cloud", "Azure",
         "Jira", "ReactJS", "Agile", "Scrum", "SAFe DevOps"
     ]
 };
