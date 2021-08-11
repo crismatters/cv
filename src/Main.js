@@ -10,7 +10,7 @@ const { Octokit } = require("@octokit/core");
 
 const Demo = ({ onToggleDark, currentTheme }) => (
     <>
-        <PrintButton />
+        <PrintButton currentTheme={currentTheme} />
         <ToggleButton currentTheme={currentTheme} onToggleDark={onToggleDark} />
         <Paper>
             <Paper>
@@ -53,14 +53,14 @@ const ToggleButton = ({ currentTheme, onToggleDark }) => {
             className="float-button-2"
             id="dark-toggle-btn"
             component={Paper}
-            icon={currentTheme === "dark" ?
+            icon={currentTheme.palette.type === "dark" ?
                 <Brightness7 style={{ color: gray[800] }}/> : 
                 <Brightness4 />
             }
             label={
                 <Button 
                     onClick={onToggleDark} 
-                    style={{ color: currentTheme === "dark" ? gray[800] : "#fff" }}
+                    style={{ color: currentTheme.palette.type === "dark" ? gray[800] : "#fff" }}
                 >
                     Toggle Theme
                 </Button>
@@ -88,8 +88,8 @@ const PrintButton = ({ currentTheme }) => {
             className="float-button"
             id="print-cv-btn"
             component={Paper}
-            icon={<PictureAsPdf style={{ color: currentTheme === "dark" ? gray[800] : "#fff" }} />}
-            label={<Button onClick={printPdf} style={{ color: currentTheme === "dark" ? gray[800] : "#fff" }}>Save as PDF</Button>}
+            icon={<PictureAsPdf style={{ color: currentTheme.palette.type === "dark" ? gray[800] : "#fff" }} />}
+            label={<Button onClick={printPdf} style={{ color: currentTheme.palette.type === "dark" ? gray[800] : "#fff" }}>Save as PDF</Button>}
         />
     )
 }
