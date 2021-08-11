@@ -33,7 +33,7 @@ const experiencesList = {
       web applications development using MongoDB, React JS, Node JS and
       Express JS. Some tools used are RedHat Ansible, SaltStack, Chef Infra, Kubernetes and Gitlab CI.`,
             authorityWebSite: 'https://www.softtek.com/',
-            MediaStreamError: '2019.12 - 2021.07',
+            meta: '2019.12 - 2021.07',
         },
     ]
 };

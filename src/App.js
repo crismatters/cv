@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
+import { blue, red } from "./assets/colors";
 import Main from "./Main";
 
 const App = () => {
-  // We keep the theme in app state
   const [theme, setTheme] = useState({
     palette: {
       primary: {
-        main: "#1967D2",
+        main: blue[700],
       },
       secondary: {
-        main: "#C5221F",
+        main: red[700],
       },
       type: "light"
     }
   });
 
-  // we change the palette type of the theme in state
   const toggleDarkTheme = () => {
     let newPaletteType = theme.palette.type === "light" ? "dark" : "light";
-    let primary = "#1967D2", secondary = "#C5221F";
+    localStorage.setItem("theme", newPaletteType);
+    let primary = blue[700], secondary = red[700];
     if (newPaletteType === "dark") {
-      primary = "#AECBFA";
-      secondary = "#F6AEA9";
+      primary = blue[200];
+      secondary = red[200];
     }
     setTheme({
       palette: {
@@ -37,10 +37,12 @@ const App = () => {
     });
   };
 
-  // we generate a MUI-theme from state's theme object
   const muiTheme = createTheme(theme);
 
-  // the mui theme is used in the themeProvider.
+  useEffect(() => {
+    localStorage.setItem("theme", theme.palette.type);
+  }, [theme.palette.type]);
+
   return (
     <MuiThemeProvider theme={muiTheme}>
       <Main onToggleDark={toggleDarkTheme} currentTheme={theme} />

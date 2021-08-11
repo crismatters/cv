@@ -1,7 +1,31 @@
 import React from 'react';
 import { Grid, Paper, Typography, Chip } from '@material-ui/core';
+import { blue, red, yellow, green, gray } from "../assets/colors";
 
 const TagsList = (props) => {
+    const getRandomColor = () => {
+        const opacity = localStorage.getItem("theme") === "dark" ? 200 : 700;
+        const randomNumber = Math.floor(Math.random() * (5 - 1) + 1);
+        var color;
+        switch(randomNumber){
+            case 1:
+                color = blue;
+                break;
+            case 2:
+                color = red;
+                break;
+            case 3: 
+                color = yellow;
+                break;
+            case 4:
+                color = green;
+                break;
+            default:
+                color = red;
+                break;
+        }
+        return color[opacity];
+    }
 
     return (
         <>
@@ -11,7 +35,14 @@ const TagsList = (props) => {
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     {props.items.map(item => (
-                        <Chip label={item} color="secondary" style={{ margin: "0.2rem" }} />
+                        <Chip 
+                            label={item} 
+                            style={{ 
+                                margin: "0.2rem", 
+                                backgroundColor: getRandomColor(), 
+                                color: localStorage.getItem("theme") === "dark" ? gray[800] : "#fff"
+                            }} 
+                        />
                     ))}
                 </Grid>
             </Grid>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Paper, Grid, Typography, Link } from '@material-ui/core';
+import { yellow } from "../assets/colors";
 
 const CommonList = (props) => {
     console.log(props.title);
@@ -25,7 +26,7 @@ const CommonList = (props) => {
                                                 {item.description}
                                             </p>
                                         </div>
-                                        <p style={{ textAlign: "left", color: "gray" }}>{item.meta}</p>
+                                        <p style={{ textAlign: "left", color: (localStorage.getItem("theme") === "dark" ? yellow[200] : yellow[700]) }}>{item.meta}</p>
                                     </Grid>
                                 </Grid>
                             </Paper>
