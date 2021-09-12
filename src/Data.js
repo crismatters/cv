@@ -21,7 +21,8 @@ const experiencesList = {
         {
             title: 'Technical Solutions Engineer',
             authority: 'Google',
-            description: 'Google Cloud Platform Solutions Engineer focused on Infrastructure as a Service products.',
+            description: `Google Cloud Platform Solutions Engineer focused on IaaS services, such as Google Kubernetes Engine
+            and Google Compute Engine. Advanced Google Cloud Platform Support.`,
             authorityWebSite: 'https://about.google/',
             meta: '2021.07 - Present',
         },

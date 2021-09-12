@@ -12,7 +12,7 @@ const Demo = ({ onToggleDark, currentTheme }) => (
     <>
         <PrintButton currentTheme={currentTheme} />
         <ToggleButton currentTheme={currentTheme} onToggleDark={onToggleDark} />
-        <Paper>
+        <Paper style={{ borderRadius: '0' }}>
             <Paper>
                 <PersonalInformation
                     {...personalData}
@@ -54,12 +54,12 @@ const ToggleButton = ({ currentTheme, onToggleDark }) => {
             id="dark-toggle-btn"
             component={Paper}
             icon={currentTheme.palette.type === "dark" ?
-                <Brightness7 style={{ color: gray[800] }}/> : 
+                <Brightness7 style={{ color: gray[800] }} /> :
                 <Brightness4 />
             }
             label={
-                <Button 
-                    onClick={onToggleDark} 
+                <Button
+                    onClick={onToggleDark}
                     style={{ color: currentTheme.palette.type === "dark" ? gray[800] : "#fff" }}
                 >
                     Toggle Theme
