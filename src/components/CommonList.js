@@ -3,7 +3,6 @@ import { Paper, Grid, Typography, Link } from '@material-ui/core';
 import { yellow } from "../assets/colors";
 
 const CommonList = (props) => {
-    console.log(props.title);
     return (
         <>
             <Grid container component={Paper} style={{ padding: "1rem", marginBottom: "1rem" }}>
