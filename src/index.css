@@ -48,3 +48,8 @@ code {
 .float-button-2:hover {
   right: -7px !important;
 }
+
+#version-footer {
+  margin-top: 10px;
+  height: 50px;
+}

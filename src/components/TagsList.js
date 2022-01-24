@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Paper, Typography, Chip } from '@material-ui/core';
+import { Grid, Typography, Chip, Accordion, AccordionDetails, AccordionSummary } from '@material-ui/core';
+import { ExpandMoreOutlined } from '@material-ui/icons';
 import { blue, red, yellow, green, gray } from "../assets/colors";
 
 const TagsList = (props) => {
@@ -7,14 +8,14 @@ const TagsList = (props) => {
         const opacity = localStorage.getItem("theme") === "dark" ? 200 : 700;
         const randomNumber = Math.floor(Math.random() * (5 - 1) + 1);
         var color;
-        switch(randomNumber){
+        switch (randomNumber) {
             case 1:
                 color = blue;
                 break;
             case 2:
                 color = red;
                 break;
-            case 3: 
+            case 3:
                 color = yellow;
                 break;
             case 4:
@@ -28,25 +29,27 @@ const TagsList = (props) => {
     }
 
     return (
-        <>
-            <Grid container component={Paper} style={{ padding: "1rem", marginBottom: "1rem" }}>
+        <Accordion defaultExpanded={true} style={{ width: "80%", margin: "auto", display: "block", marginTop: "10px" }}>
+            <AccordionSummary expandIcon={<ExpandMoreOutlined />}>
                 <Grid item xs={12}>
                     <Typography variant="h5" color="primary">{props.icon} {props.title}</Typography>
                 </Grid>
+            </AccordionSummary>
+            <AccordionDetails>
                 <Grid item xs={12} sm={3}>
                     {props.items.map(item => (
-                        <Chip 
-                            label={item} 
-                            style={{ 
-                                margin: "0.2rem", 
-                                backgroundColor: getRandomColor(), 
+                        <Chip
+                            label={item}
+                            style={{
+                                margin: "0.2rem",
+                                backgroundColor: getRandomColor(),
                                 color: localStorage.getItem("theme") === "dark" ? gray[800] : "#fff"
-                            }} 
+                            }}
                         />
                     ))}
                 </Grid>
-            </Grid>
-        </>
+            </AccordionDetails>
+        </Accordion>
     );
 }
 

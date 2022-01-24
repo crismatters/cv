@@ -120,6 +120,8 @@ const UpdatedFooter = () => {
             <Typography style={{ textAlign: 'center' }}>
                 <b>This is my most recent CV version </b>
                 and it was updated at {version.split("T")[0]}.
+                <br />
+                <i>Cristóbal Díaz</i>
             </Typography>
         </Grid>
     )

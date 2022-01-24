@@ -1,14 +1,17 @@
 import React from 'react';
-import { Paper, Grid, Typography, Link } from '@material-ui/core';
+import { Paper, Grid, Typography, Link, Accordion, AccordionDetails, AccordionSummary } from '@material-ui/core';
+import { ExpandMoreOutlined } from '@material-ui/icons';
 import { yellow } from "../assets/colors";
 
 const CommonList = (props) => {
     return (
-        <>
-            <Grid container component={Paper} style={{ padding: "1rem", marginBottom: "1rem" }}>
+        <Accordion defaultExpanded={true} style={{ width: "80%", margin: "auto", display: "block", marginTop: "10px" }}>
+            <AccordionSummary expandIcon={<ExpandMoreOutlined />}>
                 <Grid item xs={12}>
                     <Typography variant="h5" color="primary">{props.icon} {props.title}</Typography>
                 </Grid>
+            </AccordionSummary>
+            <AccordionDetails>
                 <Grid item xs={12} style={{ alignContent: "center" }}>
                     {props.items.map(item => (
                         <>
@@ -32,8 +35,8 @@ const CommonList = (props) => {
                         </>
                     ))}
                 </Grid>
-            </Grid>
-        </>
+            </AccordionDetails>
+        </Accordion>
     );
 
 }

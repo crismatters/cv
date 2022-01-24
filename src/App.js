@@ -18,6 +18,9 @@ const App = () => {
 
   const toggleDarkTheme = () => {
     let newPaletteType = theme.palette.type === "light" ? "dark" : "light";
+    var bgColor = "#fff"
+    if (newPaletteType === "dark") bgColor = "background: #424242"
+    document.body.style = bgColor;
     localStorage.setItem("theme", newPaletteType);
     let primary = blue[700], secondary = red[700];
     if (newPaletteType === "dark") {
