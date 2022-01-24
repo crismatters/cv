@@ -1,7 +1,7 @@
 import { LinkedIn, Mail, GitHub, LocationCity, School, Book, Language, Cloud, Archive } from "@material-ui/icons";
 
 export const personalData = {
-    image: 'https://drive.google.com/uc?export=view&id=1nN_7WmKM-2JZruZ_FwPkNp17hkxU1FEz',
+    image: 'https://drive.google.com/uc?export=view&id=1oK6Y6IXb6U0ST_5IJomNCEG--9Cla7FN',
     name: 'Cristóbal Silva Díaz',
     title: 'Systems Engineer',
     contacts: [
@@ -9,7 +9,8 @@ export const personalData = {
         { icon: <Mail color="primary" />, value: 'crismatters.sls@gmail.com', mail: true },
         { icon: <LocationCity color="primary" />, value: 'Aguascalientes, Mexico', location: true },
         { icon: <LinkedIn color="primary" />, value: 'linkedin.com/in/crismatters' },
-        { icon: <GitHub color="primary" />, value: 'github.com/crismatters' }
+        { icon: <GitHub color="primary" />, value: 'github.com/crismatters' },
+        { icon: <Language color="primary" />, value: 'crismatters.medium.com' }
     ]
 };
 

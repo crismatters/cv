@@ -5,9 +5,9 @@ const PersonalInformation = (props) => {
 
     return (
         <>
-            <Grid container component={Paper} style={{ padding: "1rem", marginBottom: "1rem"}}>
+            <Grid container component={Paper} style={{ padding: "1rem", marginBottom: "1rem" }}>
                 <Grid item xs={6} sm={3}>
-                    <img src={props.image} alt="Cristobal Diaz" style={{ borderRadius: "50%", maxHeight: "10rem", maxWidth: "10rem" }} />
+                    <img src={props.image} alt="Cristobal Diaz" style={{ borderRadius: "50%", maxHeight: "10rem", maxWidth: "10rem", boxShadow: "2px 2px 15px #202020" }} />
                 </Grid>
                 <Grid item xs={6} sm={6} style={{ textAlign: "center" }}>
                     <Typography color="primary" variant="h5"><b>{props.name}</b></Typography>
