@@ -1,6 +1,6 @@
 import React from "react";
 import CommonList from "./components/CommonList";
-import { PictureAsPdf, Brightness4, Brightness7 } from '@material-ui/icons';
+import { Brightness4, Brightness7 } from '@material-ui/icons';
 import { Button, Chip, Paper, Grid, Typography } from '@material-ui/core';
 import PersonalInformation from "./components/PersonalInformation";
 import { personalData, sections } from "./Data";
@@ -8,9 +8,9 @@ import TagsList from "./components/TagsList";
 import { gray } from "./assets/colors";
 const { Octokit } = require("@octokit/core");
 
-const Demo = ({ onToggleDark, currentTheme }) => (
+const Main = ({ onToggleDark, currentTheme }) => (
     <>
-        <PrintButton currentTheme={currentTheme} />
+        {/* <PrintButton currentTheme={currentTheme} /> */}
         <ToggleButton currentTheme={currentTheme} onToggleDark={onToggleDark} />
         <Paper style={{ borderRadius: '0' }}>
             <Paper>
@@ -23,9 +23,18 @@ const Demo = ({ onToggleDark, currentTheme }) => (
                 <CommonList
                     {...sections[1]}
                 />
-                <CommonList
-                    {...sections[2]}
-                />
+                <Grid container>
+                    <Grid item xs={12} sm={6}>
+                        <CommonList
+                            {...sections[2]}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <CommonList
+                            {...sections[5]}
+                        />
+                    </Grid>
+                </Grid>
                 <Grid container>
                     <Grid item xs={12} sm={6}>
                         <CommonList
@@ -44,7 +53,7 @@ const Demo = ({ onToggleDark, currentTheme }) => (
     </>
 );
 
-export default Demo;
+export default Main;
 
 const ToggleButton = ({ currentTheme, onToggleDark }) => {
     return (
@@ -69,7 +78,7 @@ const ToggleButton = ({ currentTheme, onToggleDark }) => {
     )
 }
 
-const PrintButton = ({ currentTheme }) => {
+/* const PrintButton = ({ currentTheme }) => {
     const printPdf = () => {
         document.getElementById("print-cv-btn").style.visibility = "hidden";
         document.getElementById("version-footer").style.visibility = "hidden";
@@ -92,7 +101,7 @@ const PrintButton = ({ currentTheme }) => {
             label={<Button onClick={printPdf} style={{ color: currentTheme.palette.type === "dark" ? gray[800] : "#fff" }}>Save as PDF</Button>}
         />
     )
-}
+} */
 
 const UpdatedFooter = () => {
     const [version, setVersion] = React.useState("");

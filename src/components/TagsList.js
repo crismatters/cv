@@ -35,7 +35,7 @@ const TagsList = (props) => {
                     <Typography variant="h5" color="primary">{props.icon} {props.title}</Typography>
                 </Grid>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails style={{ maxHeight: '500px', overflow: 'auto' }}>
                 <Grid item xs={12} sm={3}>
                     {props.items.map(item => (
                         <Chip

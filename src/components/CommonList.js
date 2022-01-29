@@ -11,7 +11,7 @@ const CommonList = (props) => {
                     <Typography variant="h5" color="primary">{props.icon} {props.title}</Typography>
                 </Grid>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails style={{ maxHeight: '600px', overflow: 'auto' }}>
                 <Grid item xs={12} style={{ alignContent: "center" }}>
                     {props.items.map(item => (
                         <>

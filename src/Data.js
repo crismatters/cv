@@ -1,4 +1,4 @@
-import { LinkedIn, Mail, GitHub, LocationCity, School, Book, Language, Cloud, Archive } from "@material-ui/icons";
+import { LinkedIn, Mail, GitHub, LocationCity, School, Book, Language, Cloud, Archive, TrendingUp } from "@material-ui/icons";
 
 export const personalData = {
     image: 'https://drive.google.com/uc?export=view&id=1oK6Y6IXb6U0ST_5IJomNCEG--9Cla7FN',
@@ -68,96 +68,93 @@ const educationList = {
 
 const certificatesList = {
     type: 'common-list',
-    title: 'Certificates / Courses',
+    title: 'Certificates',
     description: '',
     icon: <Book />,
     items: [
         {
-            title: 'Architecting with Google Kubernetes Engine: Foundations',
-            authority: 'Coursera',
-            authorityWebSite: 'https://www.coursera.org/',
-            meta: '2021.08'
-        },
-        {
-            title: 'Reliable Google Cloud Infrastructure: Design and Process',
-            authority: 'Coursera',
-            authorityWebSite: 'https://www.coursera.org/',
-            meta: '2021.07'
-        },
-        {
-            title: 'Elastic Google Cloud Infrastructure: Scaling and Automationn',
-            authority: 'Coursera',
-            authorityWebSite: 'https://www.coursera.org/',
-            meta: '2021.07'
-        },
-        {
-            title: 'Essential Google Cloud Infrastructure: Core Services',
-            authority: 'Coursera',
-            authorityWebSite: 'https://www.coursera.org/',
-            meta: '2021.07'
+            title: 'Associate Cloud Engineer',
+            authority: 'Google Cloud',
+            authorityWebSite: 'https://www.credential.net/94244ca3-ccd5-45ba-afd1-c8179779888e?key=4a8b6fba59ad0bea41f8d47d5253d4d0494e4aecd4bf3e0386a7581d7949cc08&record_view=true',
+            meta: '2022.01 - 2024.01'
         },
         {
             title: 'A Beginner\'s Guide to Linux Kernel Development (LFD103)',
             authority: 'The Linux Foundation',
-            authorityWebSite: 'https://www.linuxfoundation.org/',
+            authorityWebSite: 'https://www.credly.com/badges/72edb0d8-7590-40c2-9936-0c92b622bf4b',
             meta: '2021.05'
         },
         {
             title: 'Cyber Security Foundation Professional Certificate (CSFPC)',
             authority: 'CertiProf',
-            authorityWebSite: 'https://certiprof.com/',
+            authorityWebSite: 'https://www.credly.com/badges/f867dcc7-ac36-4c3e-8232-9743785f4878',
             meta: '2021.05'
         },
         {
             title: 'Scrum Foundation Professional Certificate (SFPC)',
             authority: 'CertiProf',
-            authorityWebSite: 'https://certiprof.com/',
+            authorityWebSite: 'https://www.credly.com/badges/93926aab-d28f-4547-86dc-a7e18af0da78',
             meta: '2021.05'
+        },
+    ]
+};
+
+const coursesList = {
+    type: 'common-list',
+    title: 'Courses',
+    description: '',
+    icon: <TrendingUp />,
+    items: [
+        {
+            title: 'Architecting with Google Kubernetes Engine: Foundations',
+            authority: 'Coursera',
+            authorityWebSite: 'https://drive.google.com/file/d/1k7lgzDvD_F1Gbc81X7KSRBVUT3U-k-WA/view?usp=sharing',
+            meta: '2021.08'
+        },
+        {
+            title: 'Reliable Google Cloud Infrastructure: Design and Process',
+            authority: 'Coursera',
+            authorityWebSite: 'https://drive.google.com/file/d/1gxYXaNQM4dvaiEW9mDpm9vPM4fmhWvtf/view?usp=sharing',
+            meta: '2021.07'
+        },
+        {
+            title: 'Elastic Google Cloud Infrastructure: Scaling and Automationn',
+            authority: 'Coursera',
+            authorityWebSite: 'https://drive.google.com/file/d/1ddwszSWqwgOdFp2aRxwZnNMJuFoi3kkq/view?usp=sharing',
+            meta: '2021.07'
+        },
+        {
+            title: 'Essential Google Cloud Infrastructure: Core Services',
+            authority: 'Coursera',
+            authorityWebSite: 'https://drive.google.com/file/d/1csCAfDpZKWxNL1hs2x6kCr-w1fXWPoxM/view?usp=sharing',
+            meta: '2021.07'
         },
         {
             title: 'Certified Kubernetes Administrator',
             authority: 'Linux Academy',
-            authorityWebSite: 'https://app.linuxacademy.com',
+            authorityWebSite: 'https://drive.google.com/file/d/13uUfvzGjuABAfmXzcnv1jYumwopj-e12/view?usp=sharing',
             meta: '2020.11'
         },
         {
             title: 'RedHat Certified Specialist in Ansible Automation',
             authority: 'Linux Academy',
-            authorityWebSite: 'https://app.linuxacademy.com',
+            authorityWebSite: 'https://drive.google.com/file/d/19fZdkkyBALFPA7R_TGfmLEvKRKnpVRuI/view?usp=sharing',
             meta: '2020.08'
         },
         {
             title: 'RedHat Certified Engineer',
             authority: 'Linux Academy',
-            authorityWebSite: 'https://app.linuxacademy.com',
+            authorityWebSite: 'https://drive.google.com/file/d/1Mr-osApoMnZjMBpBx34z--u3zAS6yUhJ/view?usp=sharing',
             meta: '2020.07'
         },
         {
             title: 'SaltStack Certified Engineer',
             authority: 'Linux Academy',
-            authorityWebSite: 'https://app.linuxacademy.com',
+            authorityWebSite: 'https://drive.google.com/file/d/1-G7L6h_CrGpiCwgAbmLTd0hU12RgBOvg/view?usp=sharing',
             meta: '2020.02'
         },
-        {
-            title: 'Partner: NDG Linux Unhatched',
-            authority: 'Cisco Networking Academy',
-            authorityWebSite: 'https://netacad.com',
-            meta: '2019.08'
-        },
-        {
-            title: 'CCNA Routing & Switching',
-            authority: 'Cisco Networking Academy',
-            authorityWebSite: 'https://netacad.com',
-            meta: '2019.06'
-        },
-        {
-            title: 'Introduction to Cibersecurity',
-            authority: 'Cisco Networking Academy',
-            authorityWebSite: 'https://netacad.com',
-            meta: '2019.05'
-        },
     ]
-};
+}
 
 const languagesList = {
     type: 'common-list',
@@ -189,4 +186,4 @@ const skillsList = {
     ]
 };
 
-export const sections = [experiencesList, educationList, certificatesList, languagesList, skillsList];
+export const sections = [experiencesList, educationList, certificatesList, languagesList, skillsList, coursesList];
