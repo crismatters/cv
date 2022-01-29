@@ -33,7 +33,7 @@ const Main = ({ onToggleDark, currentTheme }) => (
                 />
             </Grid>
         </Grid>
-        <Grid container style={{ marginBottom: '50px' }}>
+        <Grid container style={{ marginBottom: '70px' }}>
             <Grid item xs={12} sm={6}>
                 <CommonList
                     {...sections[3]}
@@ -109,11 +109,12 @@ const UpdatedFooter = () => {
         const repo = "cv";
         try {
             var tagsURI = `${githubAPI}/repos/${owner}/${repo}/commits`;
-            const response = await octokit.request(`GET ${tagsURI}`);
+            const response = await octokit.request(`  /* width: 100%; */
+            GET ${tagsURI}`);
             setVersion(response.data[0].commit.committer.date);
         } catch (e) {
             console.log(e);
-            setVersion("-")
+            setVersion((new Date().toISOString()))
         }
 
     }

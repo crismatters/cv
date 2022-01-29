@@ -52,12 +52,12 @@ code {
 
 #version-footer {
   position: fixed;
-  padding: 30px;
+  padding: 1px;
   right: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
-  font-size: smaller;
+  font-size: small;
 }
 
 .common-list-accordion {
