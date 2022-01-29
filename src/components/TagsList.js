@@ -29,7 +29,7 @@ const TagsList = (props) => {
     }
 
     return (
-        <Accordion defaultExpanded={true} style={{ width: "80%", margin: "auto", display: "block", marginTop: "10px" }}>
+        <Accordion defaultExpanded={true} className='common-list-accordion'>
             <AccordionSummary expandIcon={<ExpandMoreOutlined />}>
                 <Grid item xs={12}>
                     <Typography variant="h5" color="primary">{props.icon} {props.title}</Typography>

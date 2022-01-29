@@ -1,7 +1,7 @@
 import React from "react";
 import CommonList from "./components/CommonList";
 import { Brightness4, Brightness7 } from '@material-ui/icons';
-import { Button, Chip, Paper, Grid, Typography } from '@material-ui/core';
+import { Button, Chip, Paper, Grid } from '@material-ui/core';
 import PersonalInformation from "./components/PersonalInformation";
 import { personalData, sections } from "./Data";
 import TagsList from "./components/TagsList";
@@ -12,44 +12,40 @@ const Main = ({ onToggleDark, currentTheme }) => (
     <>
         {/* <PrintButton currentTheme={currentTheme} /> */}
         <ToggleButton currentTheme={currentTheme} onToggleDark={onToggleDark} />
-        <Paper style={{ borderRadius: '0' }}>
-            <Paper>
-                <PersonalInformation
-                    {...personalData}
-                />
+        <PersonalInformation
+            {...personalData}
+        />
+        <CommonList
+            {...sections[0]}
+        />
+        <CommonList
+            {...sections[1]}
+        />
+        <Grid container>
+            <Grid item xs={12} sm={6}>
                 <CommonList
-                    {...sections[0]}
+                    {...sections[2]}
                 />
+            </Grid>
+            <Grid item xs={12} sm={6}>
                 <CommonList
-                    {...sections[1]}
+                    {...sections[5]}
                 />
-                <Grid container>
-                    <Grid item xs={12} sm={6}>
-                        <CommonList
-                            {...sections[2]}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <CommonList
-                            {...sections[5]}
-                        />
-                    </Grid>
-                </Grid>
-                <Grid container>
-                    <Grid item xs={12} sm={6}>
-                        <CommonList
-                            {...sections[3]}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <TagsList
-                            {...sections[4]}
-                        />
-                    </Grid>
-                </Grid>
-            </Paper>
-            <UpdatedFooter />
-        </Paper>
+            </Grid>
+        </Grid>
+        <Grid container style={{ marginBottom: '50px' }}>
+            <Grid item xs={12} sm={6}>
+                <CommonList
+                    {...sections[3]}
+                />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+                <TagsList
+                    {...sections[4]}
+                />
+            </Grid>
+        </Grid>
+        <UpdatedFooter />
     </>
 );
 
@@ -126,12 +122,10 @@ const UpdatedFooter = () => {
     }, [])
     return (
         <Grid component={Paper} id="version-footer">
-            <Typography style={{ textAlign: 'center' }}>
-                <b>This is my most recent CV version </b>
-                and it was updated at {version.split("T")[0]}.
-                <br />
-                <i>Cristóbal Díaz</i>
-            </Typography>
+            <b>This is my most recent CV version </b>
+            and it was updated at {version.split("T")[0]}.
+            <br />
+            <i>Cristóbal Díaz</i>
         </Grid>
     )
 }
