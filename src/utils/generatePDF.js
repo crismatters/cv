@@ -58,7 +58,7 @@ export const printDoc = ({ personalData, sections }) => {
         content
     };
     pdfmake.vfs = pdfFonts.pdfMake.vfs;
-    pdfmake.createPdf(document).open();
+    pdfmake.createPdf(document).download("CV Cristobal.pdf");
 }
 
 const sectionsToContent = (sections, mainDoc) => {
