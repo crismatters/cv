@@ -1,16 +1,17 @@
 import React from "react";
 import CommonList from "./components/CommonList";
-import { Brightness4, Brightness7 } from '@material-ui/icons';
+import { Brightness4, Brightness7, PictureAsPdf } from '@material-ui/icons';
 import { Button, Chip, Paper, Grid } from '@material-ui/core';
 import PersonalInformation from "./components/PersonalInformation";
 import { personalData, sections } from "./Data";
 import TagsList from "./components/TagsList";
 import { gray } from "./assets/colors";
+import { printDoc } from "./utils/generatePDF";
 const { Octokit } = require("@octokit/core");
 
 const Main = ({ onToggleDark, currentTheme }) => (
     <>
-        {/* <PrintButton currentTheme={currentTheme} /> */}
+        <PrintButton currentTheme={currentTheme} />
         <ToggleButton currentTheme={currentTheme} onToggleDark={onToggleDark} />
         <PersonalInformation
             {...personalData}
@@ -29,19 +30,19 @@ const Main = ({ onToggleDark, currentTheme }) => (
             </Grid>
             <Grid item xs={12} sm={6}>
                 <CommonList
-                    {...sections[5]}
+                    {...sections[3]}
                 />
             </Grid>
         </Grid>
         <Grid container style={{ marginBottom: '70px' }}>
             <Grid item xs={12} sm={6}>
                 <CommonList
-                    {...sections[3]}
+                    {...sections[4]}
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
                 <TagsList
-                    {...sections[4]}
+                    {...sections[5]}
                 />
             </Grid>
         </Grid>
@@ -74,17 +75,9 @@ const ToggleButton = ({ currentTheme, onToggleDark }) => {
     )
 }
 
-/* const PrintButton = ({ currentTheme }) => {
+const PrintButton = ({ currentTheme }) => {
     const printPdf = () => {
-        document.getElementById("print-cv-btn").style.visibility = "hidden";
-        document.getElementById("version-footer").style.visibility = "hidden";
-        document.getElementById("dark-toggle-btn").style.visibility = "hidden";
-        window.print();
-        setTimeout(() => {
-            document.getElementById("print-cv-btn").style.visibility = "visible";
-            document.getElementById("version-footer").style.visibility = "visible";
-            document.getElementById("dark-toggle-btn").style.visibility = "visible";
-        }, 1000);
+        printDoc({ personalData, sections });
     }
 
     return (
@@ -97,7 +90,7 @@ const ToggleButton = ({ currentTheme, onToggleDark }) => {
             label={<Button onClick={printPdf} style={{ color: currentTheme.palette.type === "dark" ? gray[800] : "#fff" }}>Save as PDF</Button>}
         />
     )
-} */
+}
 
 const UpdatedFooter = () => {
     const [version, setVersion] = React.useState("");

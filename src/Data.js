@@ -15,7 +15,7 @@ export const personalData = {
 };
 
 const experiencesList = {
-    type: 'experiences-list',
+    type: 'common-list',
     title: 'Experiences',
     icon: <Archive />,
     items: [
@@ -43,6 +43,7 @@ const experiencesList = {
 
 const educationList = {
     title: 'Education',
+    type: "common-list",
     icon: <School color="primary" />,
     items: [
         {
@@ -178,6 +179,7 @@ const languagesList = {
 
 const skillsList = {
     title: 'Skills Proficiency',
+    type: "tags-list",
     icon: <Cloud />,
     items: [
         "Linux", "Windows", "Wireshark", "NMap", "MySQL", "PostgreSQL", "MongoDB", "JavaScript",
@@ -186,4 +188,4 @@ const skillsList = {
     ]
 };
 
-export const sections = [experiencesList, educationList, certificatesList, languagesList, skillsList, coursesList];
+export const sections = [experiencesList, educationList, certificatesList, coursesList, languagesList, skillsList];
