@@ -93,7 +93,6 @@ const commonListToContent = (section) => {
         }
     }
     section.items.forEach(item => {
-        console.log(item);
         content.table.body.push([
             {
                 stack: [
@@ -110,7 +109,6 @@ const commonListToContent = (section) => {
             { text: item.meta, style: "metadata" }
         ]);
     });
-    console.log(content);
     return content;
 }
 
