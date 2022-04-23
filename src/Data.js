@@ -22,9 +22,8 @@ const experiencesList = {
         {
             title: 'Technical Solutions Engineer',
             authority: 'Google',
-            description: `Advanced Support Engineer, with specialization on Infrastructure as a Service Products at Google Cloud Platform.
-            Hands on experience with virtualization, security and perimeter control services. Some supported products are Compute Engine, 
-            Kubernetes Engine, VPC Service Controls, IAM.`,
+            description: `Support Engineer, with specialization on Infrastructure as a Service and Security Products at Google Cloud Platform.
+            Hands on experience with virtualization, authorization and perimeter control services. Support of Compute Engine, Kubernetes Engine, VPC Service Controls, IAM services.`,
             authorityWebSite: 'https://about.google/',
             meta: '2021.07 - Present',
         },
