@@ -1,7 +1,7 @@
 import React from "react";
 import CommonList from "./components/CommonList";
 import { Brightness4, Brightness7, PictureAsPdf } from '@material-ui/icons';
-import { Button, Chip, Paper, Grid } from '@material-ui/core';
+import { Button, Chip, Paper, Grid, Link } from '@material-ui/core';
 import PersonalInformation from "./components/PersonalInformation";
 import { personalData, sections } from "./Data";
 import TagsList from "./components/TagsList";
@@ -118,6 +118,11 @@ const UpdatedFooter = () => {
         <Grid component={Paper} id="version-footer">
             <b>This is my most recent CV version </b>
             and it was updated at {version.split("T")[0]}.
+            <br />
+            See how this site was created&nbsp;
+            <Link target="_blank" href="https://crismatters.medium.com/creating-a-simple-cv-template-with-reactjs-fed81d5b1459">
+                here
+            </Link>.
             <br />
             <i>Cristóbal Díaz</i>
         </Grid>
