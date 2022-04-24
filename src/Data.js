@@ -1,7 +1,7 @@
 import { LinkedIn, Mail, GitHub, LocationCity, School, Book, Language, Cloud, Archive, TrendingUp } from "@material-ui/icons";
 
 export const personalData = {
-    image: 'https://drive.google.com/uc?export=view&id=1oK6Y6IXb6U0ST_5IJomNCEG--9Cla7FN',
+    image: 'https://drive.google.com/uc?export=view&id=1DgiCuvXNeAvIQ0GZXILIaUWrSyjfNiAY',
     name: 'Cristóbal Silva Díaz',
     title: 'Systems Engineer',
     contacts: [
