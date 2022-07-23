@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Grid, Paper, Typography, ListItem } from '@material-ui/core';
+//import LinkedInBadge from './LinkedInBadge';
 
 const PersonalInformation = (props) => {
 
@@ -27,6 +28,14 @@ const PersonalInformation = (props) => {
                         </Link>
                     ))}
                 </Grid>
+                {
+                    /*<Grid item xs={12} sm={3} style={{ display: "table" }}>
+                        <LinkedInBadge
+                            user="crismatters"
+                            theme="light"
+                        />
+                        </Grid>*/
+                }
             </Grid>
         </>
     );
