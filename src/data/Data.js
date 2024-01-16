@@ -195,7 +195,7 @@ const skillsList = {
 };
 
 const salutation = {
-    title: "Hi, I am Cristóbal",
+    title: "Hello, friend",
     description: "A Systems Engineer and Web Design and Security Enthusiast"
 }
 
