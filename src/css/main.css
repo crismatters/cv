@@ -1478,3 +1478,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 2.25rem;
   }
 }
+
+.Terminal-code {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  height: auto !important;
+  text-align: start !important;
+}
+
+.Terminal-window {
+  height: 500px !important;
+}
