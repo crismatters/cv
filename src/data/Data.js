@@ -202,7 +202,7 @@ const salutation = {
 const about = [
     {
 		id: 1,
-		bio: `I am Cristóbal, a passionate Cloud Security professional
+		bio: `I am Cristóbal, a passionate Cloud Security professional.
         With over 4 years of experience, I have become a specialist in the design, implementation, and management of Cloud security solutions. 
         I am a technology enthusiast, always looking for new ways to apply my knowledge and protect organizations.
         I consider myself an expert in the leading Cloud security services, such as Identity and Access Management (IAM), VPC, Kubernetes, and
@@ -210,7 +210,7 @@ const about = [
 	},
 	{
 		id: 2,
-		bio: `Security is not my only passion. I have also developed strong skills in web design, system architecture, and process automation.
+		bio: `I have also developed strong skills in web design, system architecture, and process automation.
         Being a multi-faceted professional allows me to come up with and implement innovative and efficient security solutions that truly meet
         the needs of organizations of any size.`,
 	},

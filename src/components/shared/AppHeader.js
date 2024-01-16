@@ -53,9 +53,9 @@ const AppHeader = () => {
 						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
 						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+							<FiMoon className="text-gray-400 hover:text-primary-dark dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+							<FiSun className="text-gray-400 hover:text-primary-dark text-xl" />
 						)}
 					</div>
 

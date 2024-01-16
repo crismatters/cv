@@ -8,10 +8,11 @@ import 'react-animated-term/dist/react-animated-term.css'
 const AppBanner = () => {
 	//const [activeTheme] = useThemeSwitcher();
 	const termLines = [
-		{ text: "id", cmd:true },
-		{ text: "uid=1000(crismatters) Systems Engineer", cmd:false },
-		{ text: "uid=1000(crismatters) Web Design Enthusiast", cmd:false },
-		{ text: "uid=1000(crismatters) Cloud Security Enthusiast", cmd:false },
+		{ text: "whoami", cmd:true },
+		{ text: "uid=1000(crismatters) Hello, I am Cristóbal", cmd:false },
+		{ text: "Systems Engineer", cmd:false },
+		{ text: "Web Design Enthusiast", cmd:false },
+		{ text: "Cloud Security Specialist", cmd:false },
 	]
 	return (
 		<motion.section
@@ -57,7 +58,7 @@ const AppBanner = () => {
 					<a
 						download="CV Cristobal.pdf"
 						href="/files/CV_Cristobal.pdf"
-						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
+						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg text-gray-400 hover:text-primary-dark dark:hover:text-white cursor-pointer rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm p-4 duration-500"
 						aria-label="Download Resume"
 					>
 						<FiArrowDownCircle className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>

@@ -387,7 +387,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-color: rgba(213, 213, 213, 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -925,7 +925,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .text-ternary-dark {
   --tw-text-opacity: 1;
-  color: rgb(30 56 81 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .text-gray-500 {
   --tw-text-opacity: 1;
@@ -984,7 +984,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .hover\:bg-ternary-dark:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(30 56 81 / var(--tw-bg-opacity));
+  background-color: rgb(89 89 89 / var(--tw-bg-opacity));
 }
 .hover\:bg-indigo-500:hover {
   --tw-bg-opacity: 1;
@@ -1000,7 +1000,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .hover\:text-primary-dark:hover {
   --tw-text-opacity: 1;
-  color: rgb(13 36 56 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
@@ -1049,7 +1049,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .dark .dark\:border-secondary-dark {
   --tw-border-opacity: 1;
-  border-color: rgb(16 45 68 / var(--tw-border-opacity));
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 .dark .dark\:border-primary-dark {
   --tw-border-opacity: 1;
@@ -1061,7 +1061,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .dark .dark\:bg-ternary-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(30 56 81 / var(--tw-bg-opacity));
+  background-color: rgb(89 89 89 / var(--tw-bg-opacity));
 }
 .dark .dark\:bg-gray-200 {
   --tw-bg-opacity: 1;
@@ -1069,7 +1069,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .dark .dark\:bg-secondary-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(16 45 68 / var(--tw-bg-opacity));
+  background-color: rgb(48 48 48 / var(--tw-bg-opacity));
 }
 .dark .dark\:font-medium {
   font-weight: 500;
@@ -1488,4 +1488,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .Terminal-window {
   height: 500px !important;
+}
+
+.Terminal-cursor {
+  background-color: #9ca3af !important;
 }
