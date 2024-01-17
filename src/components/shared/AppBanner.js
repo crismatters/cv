@@ -1,5 +1,5 @@
 //import useThemeSwitcher from '../../hooks/useThemeSwitcher';
-import { FiArrowDownCircle } from 'react-icons/fi';
+import { FiFileText } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import Data from '../../data/Data';
 import Terminal from 'react-animated-term'
@@ -56,14 +56,14 @@ const AppBanner = () => {
 					className="flex justify-center sm:block"
 				>
 					<a
-						download="CV Cristobal.pdf"
-						href="/files/CV_Cristobal.pdf"
+						target='blank'
+						href="https://docs.google.com/document/d/e/2PACX-1vScdM97wyU2B1Y55MDyPrtWeWiIqdj2SWvbOQM8Fo3wzyJkzGyP89LclsClYyqw6Zo9E6J_a9zZzfZq/pub"
 						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg text-gray-400 hover:text-primary-dark dark:hover:text-white cursor-pointer rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm p-4 duration-500"
-						aria-label="Download Resume"
+						aria-label="Read Resume"
 					>
-						<FiArrowDownCircle className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>
+						<FiFileText className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiFileText>
 						<span className="text-sm sm:text-lg font-general-medium duration-100">
-							Download CV
+							Read CV
 						</span>
 					</a>
 				</motion.div>
