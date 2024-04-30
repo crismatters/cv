@@ -1,5 +1,5 @@
-import GoogleCloudImage from '../images/brands/gcp_gray.webp';
-import SofttekImage from '../images/brands/softtek_gray.webp';
+import GoogleCloudImage from '../images/brands/gcp_gray.png';
+import SofttekImage from '../images/brands/softtek_gray.jpg';
 
 
 export const personalData = {
@@ -223,11 +223,13 @@ const employersData = {
             id: 1,
             title: 'Google Cloud',
             img: GoogleCloudImage,
+            site: "https://cloud.google.com"
         },
         {
             id: 2,
             title: 'Softtek',
             img: SofttekImage,
+            site: "https://softtek.com"
         },
     ]
 }

@@ -1,11 +1,13 @@
-const AboutClientSingle = ({ title, image }) => {
+const AboutClientSingle = ({ title, image, site }) => {
 	return (
 		<>
-			<img
-				src={image}
-				className="w-64 py-5 px-10 border bg-secondary-light border-ternary-light dark:border-ternary-dark shadow-sm rounded-lg mb-8 cursor-pointer"
-				alt={title}
-			/>
+			<a href={site} target="_blank" rel="noreferrer">
+				<img
+					src={image}
+					className="w-64 py-5 px-10 border bg-secondary-light border-ternary-light dark:border-ternary-dark shadow-sm rounded-lg mb-8 cursor-pointer grayed-img"
+					alt={title}
+				/>
+			</a>
 		</>
 	);
 };
